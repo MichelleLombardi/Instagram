@@ -13,7 +13,7 @@
   <table id="TAB1" populated="true" UUID="e0c2df4b-743a-4108-872c-446cb18dee2d" name="app_user" objectType="TABLE" physicalName="app_user" >
    <remarks></remarks>
    <folder id="FOLTAB11" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL2" populated="true" UUID="6cc110a5-7e88-46e8-98ae-650dc638e27f" autoIncrement="false" autoIncrementSequenceName="app_user_id_app_user_seq" defaultValue="" name="id_app_user" nullable="0" physicalName="id_app_user" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL2" populated="true" UUID="6cc110a5-7e88-46e8-98ae-650dc638e27f" autoIncrement="true" autoIncrementSequenceName="app_user_id_app_user_seq" defaultValue="" name="id_app_user" nullable="0" physicalName="id_app_user" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
     <column id="COL3" populated="true" UUID="f5f98317-a978-4a43-be64-1cd91c9ac66c" autoIncrement="false" autoIncrementSequenceName="app_user_name_app_user_seq" defaultValue="" name="name_app_user" nullable="0" physicalName="name_app_user" precision="200" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >

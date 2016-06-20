@@ -13,7 +13,7 @@
   <table id="TAB1" populated="true" UUID="e0c2df4b-743a-4108-872c-446cb18dee2d" name="app_user" objectType="TABLE" physicalName="app_user" >
    <remarks></remarks>
    <folder id="FOLTAB11" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL2" populated="true" UUID="6cc110a5-7e88-46e8-98ae-650dc638e27f" autoIncrement="false" autoIncrementSequenceName="app_user_id_app_user_seq" defaultValue="" name="id_app_user" nullable="0" physicalName="id_app_user" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL2" populated="true" UUID="6cc110a5-7e88-46e8-98ae-650dc638e27f" autoIncrement="true" autoIncrementSequenceName="app_user_id_app_user_seq" defaultValue="" name="id_app_user" nullable="0" physicalName="id_app_user" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
     <column id="COL3" populated="true" UUID="f5f98317-a978-4a43-be64-1cd91c9ac66c" autoIncrement="false" autoIncrementSequenceName="app_user_name_app_user_seq" defaultValue="" name="name_app_user" nullable="0" physicalName="name_app_user" precision="200" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
@@ -48,7 +48,7 @@
   <table id="TAB11" populated="true" UUID="28934742-a241-42f4-b55b-a873e7347bb8" name="likes" objectType="TABLE" physicalName="likes" >
    <remarks></remarks>
    <folder id="FOLTAB111" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL12" populated="true" UUID="31113266-4c70-4670-8c2c-8c50819eb9b2" autoIncrement="false" autoIncrementSequenceName="app_user_id_app_user_seq" defaultValue="" name="id_app_user" nullable="0" physicalName="id_app_user" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL12" populated="true" UUID="31113266-4c70-4670-8c2c-8c50819eb9b2" autoIncrement="false" autoIncrementSequenceName="app_user_id_app_user_seq_1" defaultValue="" name="id_app_user" nullable="0" physicalName="id_app_user" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
     <column id="COL13" populated="true" UUID="6895339a-9af9-419f-a386-78315ca0ba23" autoIncrement="false" autoIncrementSequenceName="publish_id_publish_seq" defaultValue="" name="id_publish" nullable="0" physicalName="id_publish" precision="0" primaryKeySeq="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
@@ -69,7 +69,7 @@
   <table id="TAB17" populated="true" UUID="df39b341-da03-4eb5-b640-f83901904319" name="publish" objectType="TABLE" physicalName="publish" >
    <remarks></remarks>
    <folder id="FOLTAB171" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL18" populated="true" UUID="b79c96ee-2d5d-4803-ac22-ba0947439f52" autoIncrement="true" autoIncrementSequenceName="publish_id_publish_seq" defaultValue="" name="id_publish" nullable="0" physicalName="id_publish" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL18" populated="true" UUID="b79c96ee-2d5d-4803-ac22-ba0947439f52" autoIncrement="true" autoIncrementSequenceName="publish_id_publish_seq_1" defaultValue="" name="id_publish" nullable="0" physicalName="id_publish" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
     <column id="COL19" populated="true" UUID="f2588c38-e8b3-4fb0-b629-ca4267e4560c" autoIncrement="false" autoIncrementSequenceName="publish_title_publish_seq" defaultValue="" name="title_publish" nullable="0" physicalName="title_publish" precision="200" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
@@ -90,7 +90,7 @@
     <column id="COL24" populated="true" UUID="881ddf0d-9719-42da-82ab-cd14730bedcb" autoIncrement="false" autoIncrementSequenceName="publish_date_time_publish_seq" defaultValue="" name="date_time_publish" nullable="0" physicalName="date_time_publish" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
      <remarks></remarks>
     </column>
-    <column id="COL25" populated="true" UUID="568eaf44-4e2b-48e5-b4d7-cb05e95d6163" autoIncrement="false" autoIncrementSequenceName="app_user_id_app_user_seq" defaultValue="" name="id_app_user" nullable="0" physicalName="id_app_user" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL25" populated="true" UUID="568eaf44-4e2b-48e5-b4d7-cb05e95d6163" autoIncrement="false" autoIncrementSequenceName="app_user_id_app_user_seq_2" defaultValue="" name="id_app_user" nullable="0" physicalName="id_app_user" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
     <column id="COL26" populated="true" UUID="0e0aa7c7-0951-4ba9-a09f-c469137ba12c" autoIncrement="false" autoIncrementSequenceName="publish_tag_publish_seq" defaultValue="" name="tag_publish" nullable="0" physicalName="tag_publish" precision="200" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
@@ -109,13 +109,13 @@
   </table>
   <relationships>
    <relationship id="REL29" populated="true" UUID="cdc4bc87-cd8c-4066-b54e-75b978c4e0cb" deferrability="7" deleteRule="0" fk-table-ref="TAB17" fkCardinality="7" identifying="false" name="app_user_publish_fk" physicalName="app_user_publish_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="0" >
-    <column-mapping id="CMP30" populated="true" UUID="826b5a00-bb2e-4954-bc28-5c8d1ebd63da" fk-column-ref="COL25" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
+    <column-mapping id="CMP30" populated="true" UUID="dfee5c68-4d03-45e0-83a7-bba086fc462f" fk-column-ref="COL25" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
    </relationship>
    <relationship id="REL31" populated="true" UUID="f734500f-f8a3-4e19-92a8-46190ee6f0cb" deferrability="7" deleteRule="0" fk-table-ref="TAB11" fkCardinality="7" identifying="true" name="app_user_likes_fk" physicalName="app_user_likes_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="0" >
-    <column-mapping id="CMP32" populated="true" UUID="1552bb02-d978-4c2a-b4d9-45176f1ea46e" fk-column-ref="COL12" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
+    <column-mapping id="CMP32" populated="true" UUID="5ce5cb27-f941-42bd-93b8-8f2ccc402a7f" fk-column-ref="COL12" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
    </relationship>
    <relationship id="REL33" populated="true" UUID="9725d4c5-9bbf-4f89-9545-9b213b48c6a6" deferrability="7" deleteRule="0" fk-table-ref="TAB11" fkCardinality="7" identifying="true" name="publish_likes_fk" physicalName="publish_likes_fk" pk-table-ref="TAB17" pkCardinality="2" updateRule="0" >
-    <column-mapping id="CMP34" populated="true" UUID="c9af4e40-4328-414e-8320-441091f35e4f" fk-column-ref="COL13" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL18" />
+    <column-mapping id="CMP34" populated="true" UUID="d429e934-25b7-4983-90c5-ac0476632df5" fk-column-ref="COL13" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL18" />
    </relationship>
   </relationships>
  </target-database>
