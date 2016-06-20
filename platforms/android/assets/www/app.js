@@ -4,7 +4,7 @@ app.config(["$stateProvider", "$urlRouterProvider",
 
     function($state, $url) {
         $url.otherwise("/login");
-        // $url.when("/home", "/home/index");
+        $url.when("/home", "/home/index");
 
         $state
             .state("login", {
@@ -26,6 +26,11 @@ app.config(["$stateProvider", "$urlRouterProvider",
                 "url": "/take-picture",
                 "templateUrl": "views/take-picture.html",
                 "controller": "TakePictureCtrl"
+            })
+            .state("register", {
+                "url": "/register",
+                "templateUrl": "views/register.html",
+                "controller": "RegisterCtrl"
             });
 
     }
@@ -34,8 +39,16 @@ app.config(["$stateProvider", "$urlRouterProvider",
 
 app.controller("LoginCtrl", ["$scope", "$http", "$state",
 
+//    function ($scope, $http, $state) {
+//        $state.transitionTo("home");
+//    }
+
+]);
+
+app.controller("RegisterCtrl", ["$scope", "$http", "$state",
+
     function ($scope, $http, $state) {
-        $state.transitionTo("home");
+        
     }
 
 ]);

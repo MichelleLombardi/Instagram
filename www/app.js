@@ -26,19 +26,33 @@ app.config(["$stateProvider", "$urlRouterProvider",
                 "url": "/take-picture",
                 "templateUrl": "views/take-picture.html",
                 "controller": "TakePictureCtrl"
+            })
+            .state("register", {
+                "url": "/register",
+                "templateUrl": "views/register.html",
+                "controller": "RegisterCtrl"
             });
 
     }
 ]);
 
+app.controller("RegisterCtrl", ["$scope", "$http", "$state",
+
+    function ($scope, $http, $state) {
+        
+    }
+
+]);
 
 app.controller("LoginCtrl", ["$scope", "$http", "$state",
 
-//    function ($scope, $http, $state) {
-//        $state.transitionTo("home");
-//    }
+    function ($scope, $http, $state) {
+        //$state.transitionTo("home");
+    }
 
 ]);
+
+
 
 app.controller("HomeCtrl", ["$scope", "$http",
     function ($scope, $http) {
