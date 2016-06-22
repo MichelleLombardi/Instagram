@@ -31,7 +31,6 @@ function register() {
                 document.getElementById('inputnn').value = "";
                 document.getElementById('inpute').value = "";
                 document.getElementById('inputp').value = "";
-
                 console.log(error);
             }
         },
