@@ -13,9 +13,10 @@ function register() {
             pass: document.getElementById('inputp').value // input password del modal2
         },
         success: function (data) {
+            data = JSON.parse(data);
             // Si no hay error
             if (!data.error) { // si el email no existe
-                alert("registrado");
+                document.getElementById("register_alert1").style.display = "block";
                 document.getElementById('inputn').value = "";
                 document.getElementById('inputln').value = "";
                 document.getElementById('inputnn').value = "";
@@ -23,12 +24,13 @@ function register() {
                 document.getElementById('inputp').value = "";
             } else {
                 var error = data.error;
+                document.getElementById("register_alert2").style.display = "block";
+                document.getElementById("register_alert2").innerHTML = error;
                 document.getElementById('inputn').value = "";
                 document.getElementById('inputln').value = "";
                 document.getElementById('inputnn').value = "";
                 document.getElementById('inpute').value = "";
                 document.getElementById('inputp').value = "";
-
                 console.log(error);
             }
         },
