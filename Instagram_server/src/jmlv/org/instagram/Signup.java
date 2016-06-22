@@ -47,29 +47,41 @@ public class Signup extends HttpServlet {
 			String lastname = request.getParameter("lastName");
 			String password = request.getParameter("pass");
 			String nickname = request.getParameter("nickname");
+			w.executeQueryX("SELECT COUNT(*) FROM app_user WHERE nickname_app_user=?",nickname);
+			JBuilder json = new JBuilder();
+			json.add("count",w.getTable());
+			String[] count = json.getJBuilder().split("\"");
 			response.setHeader("Access-Control-Allow-Origin", "*");
-			String email = request.getParameter("email");
-			Object [] params = {firstname,lastname,email,nickname,password};
-			w.execute("insert into app_user (name_app_user,lastname_app_user,nickname_app_user,email_app_user,password_app_user) values(?,?,?,?,?)",params);
-	        out = response.getWriter();
-	        JBuilder json2 = new JBuilder();
-			json2.add("firstname",firstname);
-			json2.add("lastname",lastname);
-			json2.add("nickname",nickname);
-			json2.add("password",password);
-			json2.add("email",email);
-			System.out.println("post:"+firstname);
-			out.print(json2.getJBuilder());
-			File file = new File("/Users/joselopez/Documents/workspace/Instagram_server/WebContent/Media/"+nickname);
-	        if (!file.exists()) {
-	            if (file.mkdir()) {
-	                System.out.println("Directory is created!");
-	            } else {
-	                System.out.println("Failed to create directory!");
-	            }
-	        }
+			if(count[5].equals("0")){
+				String email = request.getParameter("email");
+				Object [] params = {firstname,lastname,email,nickname,password};
+				w.execute("insert into app_user (name_app_user,lastname_app_user,email_app_user,nickname_app_user,password_app_user) values(?,?,?,?,?)",params);
+		        out = response.getWriter();
+		        JBuilder json2 = new JBuilder();
+				json2.add("firstname",firstname);
+				json2.add("lastname",lastname);
+				json2.add("nickname",nickname);
+				json2.add("password",password);
+				json2.add("email",email);
+				System.out.println("post:"+firstname);
+				out.print(json2.getJBuilder());
+				File file = new File("/Users/joselopez/Documents/workspace/Instagram_server/WebContent/Media/"+nickname);
+		        if (!file.exists()) {
+		            if (file.mkdir()) {
+		                System.out.println("Directory is created!");
+		            } else {
+		                System.out.println("Failed to create directory!");
+		            }
+		        }
 
-			w.close();
+				w.close();
+			}else{
+				out = response.getWriter();
+		        JBuilder json2 = new JBuilder();
+				json2.add("error","Nickname already exists");
+				out.print(json2.getJBuilder());
+			}
+		w.close();
 	}
 
 }
