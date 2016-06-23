@@ -3,6 +3,8 @@ package jmlv.org.instagram;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import javax.servlet.ServletException;
@@ -52,18 +54,41 @@ public class Signup extends HttpServlet {
 			json.add("count",w.getTable());
 			String[] count = json.getJBuilder().split("\"");
 			response.setHeader("Access-Control-Allow-Origin", "*");
+			 JBuilder json2 = new JBuilder();
+			 StringBuffer hexString = new StringBuffer();
 			if(count[5].equals("0")){
+				MessageDigest mdAlgorithm;
+				try {
+					mdAlgorithm = MessageDigest.getInstance("MD5");
+					mdAlgorithm.update(nickname.getBytes());
+
+					byte[] digest = mdAlgorithm.digest();
+					
+
+					for (int i = 0; i < digest.length; i++) {
+					    nickname = Integer.toHexString(0xFF & digest[i]);
+
+					    if (nickname.length() < 2) {
+					        nickname = "0" + nickname;
+					    }
+
+					    hexString.append(nickname);
+					}
+					json2.add("token", hexString.toString());
+				} catch (NoSuchAlgorithmException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				String email = request.getParameter("email");
-				Object [] params = {firstname,lastname,email,nickname,password};
-				w.execute("insert into app_user (name_app_user,lastname_app_user,email_app_user,nickname_app_user,password_app_user) values(?,?,?,?,?)",params);
+				Object [] params = {firstname,lastname,email,nickname,password,hexString.toString()};
+				w.execute("insert into app_user (name_app_user,lastname_app_user,email_app_user,nickname_app_user,password_app_user,token,access_token_app_user) values(?,?,?,?,?,?)",params);
 		        out = response.getWriter();
-		        JBuilder json2 = new JBuilder();
 				json2.add("firstname",firstname);
 				json2.add("lastname",lastname);
 				json2.add("nickname",nickname);
 				json2.add("password",password);
 				json2.add("email",email);
-				System.out.println("post:"+firstname);
+				System.out.println("post:"+json2.getJBuilder());
 				out.print(json2.getJBuilder());
 				File file = new File("/Users/joselopez/Documents/workspace/Instagram_server/WebContent/Media/"+nickname);
 		        if (!file.exists()) {
@@ -77,7 +102,6 @@ public class Signup extends HttpServlet {
 				w.close();
 			}else{
 				out = response.getWriter();
-		        JBuilder json2 = new JBuilder();
 				json2.add("error","Nickname already exists");
 				out.print(json2.getJBuilder());
 			}
