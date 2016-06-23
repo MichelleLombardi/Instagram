@@ -13,6 +13,7 @@ function register() {
             pass: document.getElementById('inputp').value // input password del modal2
         },
         success: function (data) {
+            console.log(data);
             data = JSON.parse(data);
             // Si no hay error
             if (!data.error) { // si el email no existe

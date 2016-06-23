@@ -36,15 +36,6 @@ app.config(["$stateProvider", "$urlRouterProvider",
     }
 ]);
 
-
-app.controller("LoginCtrl", ["$scope", "$http", "$state",
-
-//    function ($scope, $http, $state) {
-//        $state.transitionTo("home");
-//    }
-
-]);
-
 app.controller("RegisterCtrl", ["$scope", "$http", "$state",
 
     function ($scope, $http, $state) {
@@ -52,6 +43,16 @@ app.controller("RegisterCtrl", ["$scope", "$http", "$state",
     }
 
 ]);
+
+app.controller("LoginCtrl", ["$scope", "$http", "$state",
+
+    function ($scope, $http, $state) {
+//        $state.transitionTo("home");
+    }
+
+]);
+
+
 
 app.controller("HomeCtrl", ["$scope", "$http",
     function ($scope, $http) {
