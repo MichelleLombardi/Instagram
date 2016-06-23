@@ -47,11 +47,7 @@ app.controller("RegisterCtrl", ["$scope", "$http", "$state",
 app.controller("LoginCtrl", ["$scope", "$http", "$state",
 
     function ($scope, $http, $state) {
-<<<<<<< HEAD
         //$state.transitionTo("home");
-=======
-//        $state.transitionTo("home");
->>>>>>> origin/master
     }
 
 ]);
