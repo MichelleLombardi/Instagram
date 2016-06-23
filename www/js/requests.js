@@ -65,30 +65,20 @@ function login() {
             // Si no hay error
             if (!data.error) { // si el email no existe
                 document.getElementById("register_alert1").style.display = "block";
-                document.getElementById('inputn').value = "";
-                document.getElementById('inputln').value = "";
-                document.getElementById('inputnn').value = "";
-                document.getElementById('inpute').value = "";
-                document.getElementById('inputp').value = "";
+                document.getElementById('inputnnlogin').value = "";
+                document.getElementById('inputplogin').value = "";
             } else {
                 var error = data.error;
                 document.getElementById("register_alert2").style.display = "block";
                 document.getElementById("register_alert2").innerHTML = error;
-                document.getElementById('inputn').value = "";
-                document.getElementById('inputln').value = "";
-                document.getElementById('inputnn').value = "";
-                document.getElementById('inpute').value = "";
-                document.getElementById('inputp').value = "";
+                document.getElementById('inputnnlogin').value = "";
+                document.getElementById('inputplogin').value = "";
                 console.log(error);
             }
         },
         error: function (err) {
-
-            document.getElementById('inputn').value = "";
-            document.getElementById('inputln').value = "";
-            document.getElementById('inputnn').value = "";
-            document.getElementById('inpute').value = "";
-            document.getElementById('inputp').value = "";
+            document.getElementById('inputnnlogin').value = "";
+            document.getElementById('inputplogin').value = "";
 
         }
     });
