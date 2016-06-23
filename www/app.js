@@ -47,7 +47,7 @@ app.controller("RegisterCtrl", ["$scope", "$http", "$state",
 app.controller("LoginCtrl", ["$scope", "$http", "$state",
 
     function ($scope, $http, $state) {
-        $state.transitionTo("home");
+//        $state.transitionTo("home");
     }
 
 ]);
