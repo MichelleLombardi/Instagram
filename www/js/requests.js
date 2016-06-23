@@ -64,7 +64,7 @@ function login() {
             data = JSON.parse(data);
             // Si no hay error
             if (!data.error) { // si el email no existe
-                document.getElementById("register_alert1").style.display = "block";
+                alert("inicio sesion");
                 document.getElementById('inputnnlogin').value = "";
                 document.getElementById('inputplogin').value = "";
             } else {
